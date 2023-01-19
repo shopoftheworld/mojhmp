@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains hmp_media.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function hmp_media_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the hmp_media module.
+    case 'help.page.hmp_media':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('HMP Media') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function hmp_media_theme() {
+  return [
+    'hmp_media' => [
+      'render element' => 'children',
+    ],
+  ];
+}

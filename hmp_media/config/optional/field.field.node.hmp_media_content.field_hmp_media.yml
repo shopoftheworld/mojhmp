@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hmp_media
+    - node.type.hmp_media_content
+  module:
+    - file
+id: node.hmp_media_content.field_hmp_media
+field_name: field_hmp_media
+entity_type: node
+bundle: hmp_media_content
+label: 'HMP Media'
+description: 'Add a media content item Video (MP4) , Audio (.wav) or image (.jpg)'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'wav mp4 jpg'
+  max_filesize: '10 mb'
+  description_field: false
+field_type: file

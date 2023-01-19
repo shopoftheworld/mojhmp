@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Prison List'
+vid: prison_list
+description: 'A list of prisons that can be assigned to media content'
+weight: 0
